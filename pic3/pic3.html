@@ -1,0 +1,551 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>pic3</title>
+<link href="base.css" rel="stylesheet"/>
+<script src="echarts.js"></script>
+</head>
+
+<body>
+	<div class="top-bar">
+		<div class="top-bar-left"></div>
+		<div class="top-bar-right">
+			<i class="icon-setting"></i>
+			<i class="icon-ring"></i>
+			<a class="a-log-out">Log Out</a>
+		</div>
+	</div>
+	<div class="top-nav">
+		<span>Audience Overview</span>
+		<nav>
+			<a href="#">DASHBOARD</a>
+			<a href="#">PROJECTS</a>
+			<a href="#">CALENDAR</a>
+			<a href="#">MAILBOX</a>
+			<a href="#">SETTINGS</a>
+		</nav>
+	</div>
+	<div class="div-1">
+		<div class="h-z">
+			<div id="huanxing"></div>
+			<div id="zhuxing"></div>
+		</div>
+	</div>
+	<div class="div-2">
+		<div id="bingzhuang"></div>
+		<div class="span-p-1">
+			<span>23:01:04</span>
+			<p>TIME LEFT</p>
+		</div>
+		<div class="span-p-2">
+			<span>$15,596</span>
+			<p>TOTAL EARNED</p>
+		</div>
+		<div class="span-p-3">
+			<span>$3,596</span>
+			<p>TOTAL SPENT</p>
+		</div>
+	</div>
+	<div class="div-3">
+		<div class="market-value">
+			<div class="span-p-4">
+				<span>Market Value</span>
+				<p>$20,467</p>
+			</div>
+			<div class="sm-icon-div">
+				<i class="icon-setting"></i>
+			</div>		
+		</div>
+		<div id="shuangzhuxing"></div>
+	</div>
+	<div class="div-4">
+		<div class="analytics">
+			<div class="ana-followers">
+				<span>25,134</span>
+			</div>
+			<div class="span-p-5">
+				<span>Analytics</span>
+			</div>
+			<div class="sm-icon-div">
+				<i class="icon-setting"></i>
+			</div>
+		</div>
+		<div id="quxian"></div>
+	</div>
+	<div class="div-5">
+		<div class="support-requests">
+			<div class="span-p-5">
+				<span>Support Requests</span>
+			</div>
+			<div class="sm-a-div">
+				<a>View All</a>
+			</div>
+		</div>
+		<hr style="border:thin solid #E1E1D7;width:100%;display: block;float: left"/>
+		<div id="table">
+			<table>
+			  	<thead>
+					<th>TIME</th>
+					<th width="350px">USER NAME</th>
+					<th>STATUS</th>
+				</thead>
+				<tbody>
+				<tr>
+				  <td align="center">9:45pm</td>
+				  <td align="center">info@design.com</td>
+				  <td align="center"><button class="btn-green">solved</button></td>
+				</tr>
+				<tr>
+				  <td align="center">9:45pm</td>
+				  <td align="center">info@design.com</td>
+				  <td align="center"><button class="btn-green">solved</button></td>
+				</tr>
+				<tr>
+				  <td align="center">9:45pm</td>
+				  <td align="center">info@design.com</td>
+				  <td align="center"><button class="btn-green">solved</button></td>
+				</tr>
+				<tr>
+				  <td align="center">9:45pm</td>
+				  <td align="center">info@design.com</td>
+				  <td align="center"><button class="btn-red">solved</button></td>
+				</tr>
+				<tr>
+				  <td align="center">9:45pm</td>
+				  <td align="center">info@design.com</td>
+				  <td align="center"><button class="btn-red">solved</button></td>
+				</tr>
+			  </tbody>
+			</table>
+		</div>
+	</div>
+	
+	<div class="footer">
+		<div class="footer-left"></div>
+		<div class="footer-right">
+			<ul>
+				<li>NEWS</li>
+				<li>CHANNELS</li>
+				<li>OVERVIEW</li>
+				<li>TIMELINE</li>
+			</ul>
+			<ul>
+				<li>SPORT</li>
+				<li>CULTURE</li>
+				<li>NATURE</li>
+				<li>MUSIC</li>
+			</ul>
+			<ul>
+				<li>WEATHER</li>
+				<li>AUTOS</li>
+				<li>LOCAL</li>
+				<li>SHOP</li>
+			</ul>
+			<ul>
+				<li>FUTURE</li>
+				<li>FOOD</li>
+				<li>EARTH</li>
+				<li>TV</li>
+			</ul>
+			<ul>
+				<li>TRAVEL</li>
+				<li>RADIO</li>
+			</ul>
+		</div>
+	</div>
+	
+	<!--环形图-->
+	<script>
+	var myChart = echarts.init(document.getElementById('huanxing'));
+	var labelTop = {
+		normal : {
+				label : {
+					show : true,
+					position : 'center',
+					formatter : function (params){
+						return params.value.toLocaleString()
+					},
+					textStyle: {
+						baseline : 'top',
+						color:'black',
+						fontSize : 30,
+            			fontWeight : 'bold'
+					}
+				},
+				labelLine : {
+					show : false
+				}
+			}
+		};
+	var labelFromatter1 = {
+			normal : {
+				label : {
+					formatter : function (params){
+						return option.series[0].data[0].name
+					},
+					textStyle: {
+						baseline : 'bottom',
+						color: 'black',
+						fontSize : 1,
+            			fontWeight : 'normal'
+					}
+				}
+			},
+		};
+	var labelFromatter2 = {
+			normal : {
+				label : {
+					formatter : function (params){
+						return option.series[1].data[0].name
+					},
+					textStyle: {
+						baseline : 'bottom',
+						color: 'black',
+						fontSize : 1,
+            			fontWeight : 'normal'
+					}
+				}
+			},
+		};
+	var labelFromatter3 = {
+			normal : {
+				label : {
+					formatter : function (params){
+						return option.series[2].data[0].name
+					},
+					textStyle: {
+						baseline : 'bottom',
+						color: 'black',
+						fontSize : 1,
+            			fontWeight : 'normal'
+					}
+				}
+			},
+		};
+	var labelBottom = {
+			normal : {
+				color: '#ccc',
+				label : {
+					show : true,
+					position : 'center'
+				},
+				labelLine : {
+					show : false
+				}
+			},
+			emphasis: {
+				color: 'rgba(0,0,0,0)'
+			}
+		};
+	var radius = [60, 70];
+	var option = {
+		title : {
+			text: 'Pageviews by users(Past 24 hours)',
+			subtext: 'Total / Out of 6,356 views',
+			x: 'left',
+			subtextStyle:{
+				color:"black",
+			},
+			itemGap:200
+		},
+		series : [
+				{
+					color : ['#99CC66'],
+					type : 'pie',
+					center : ['20%', '40%'],
+					radius : radius,
+					itemStyle : labelFromatter1,
+					data : [
+						{name:'APPLICATIONS', value:2124,itemStyle : labelTop},
+						{name:'other', value:450, itemStyle : labelBottom}
+					]
+				},
+				{
+					color : ['#0099CC'],
+					type : 'pie',
+					center : ['50%', '40%'],
+					radius : radius,
+					itemStyle : labelFromatter2,
+					data : [
+						{name:'INTERVIEWS', value:1467,itemStyle : labelTop},
+						{name:'other', value:300, itemStyle : labelBottom}
+					]
+				},
+				{
+					color : ['#FF9966'],
+					type : 'pie',
+					center : ['80%', '40%'],
+					radius : radius,
+					itemStyle : labelFromatter3,
+					data : [
+						{name:'FORWARDS', value:296,itemStyle : labelTop},
+						{name:'other', value:65, itemStyle : labelBottom}
+					]
+				},
+
+			]
+		};
+                    
+	myChart.setOption(option);
+	</script>
+	
+    <!--柱形图-->
+	<script>
+	var myChart1 = echarts.init(document.getElementById('zhuxing'));
+	var option1 = {
+			title : {
+				text: '',
+				subtext: 'Applicats a Day',
+				x: 'left',
+				subtextStyle:{
+					color:"black",
+				},
+				itemGap: 245
+			},
+			color: ['#99CC66'],
+			tooltip : {
+				trigger: 'axis',
+				axisPointer : {            
+					type : 'shadow'        
+				}
+			},
+			grid: {
+				left: '3%',
+				right: '17%',
+				bottom: '16%',
+				containLabel: true
+			},
+			xAxis : [
+				{
+					show:false,
+					type : 'category',
+					data : ['x1', 'x2', 'x3', 'x4', 'x5', 'x6', 'x7','x8','x9','x10'],
+					axisTick: {
+						alignWithLabel: true
+					},
+					
+				}
+			],
+			yAxis : [
+				{
+					type : 'value',
+					min: 0,
+					max: 100,
+					interval: 50,
+					axisLine:{
+						show:false
+					},
+//					splitLine:{
+//						show:false
+//					}
+					axisTick: {
+						length: 0
+					}
+				}
+			],
+			series : [
+				{
+					name:'x',
+					type:'bar',
+					barWidth: '30%',
+					data:[100, 52, 100, 104, 100, 100, 110, 100,110,50]
+				}
+			]
+		};
+		myChart1.setOption(option1);
+	</script>
+	
+	<!--饼状图-->
+	<script>
+	var myChart2 = echarts.init(document.getElementById('bingzhuang'));
+	var labelBottom2 = {
+			normal : {
+				color: '#ccc',
+				label : {
+					show : false,
+					position : 'center'
+				},
+				labelLine : {
+					show : false
+				}
+			},
+			emphasis: {
+				color: 'rgba(0,0,0,0)'
+			}
+		};
+	var option2 = {
+		title : {
+			text: 'Pageviews by users(Past 5 days)',
+			subtext: '',
+			padding: [40,20,5,40],
+			x: 'left',
+			textStyle:{
+				color:"black",
+				fontWeight: 100
+			},
+			itemGap:200
+		},
+		series : [
+				{
+					color: ['#99CC66'],
+					type : 'pie',
+					center : ['70%', '60%'],
+					radius : '60%',
+//					itemStyle : labelFromatter3,
+					label : {
+					normal : {
+							show : true,
+							position: 'inner',
+							formatter : '{d}'+'%',
+							textStyle: {
+								baseline : 'top',
+								color:'white',
+							}
+						},
+						labelLine : {
+							show : true
+						}
+					},
+					data : [
+						{name:'name1', value:73},
+						{name:'other', value:32, itemStyle : labelBottom2}
+					]
+				},
+
+			]
+		};
+                    
+	myChart2.setOption(option2);
+	</script>
+	
+	<!--双柱形图-->
+	<script>
+		var myChart3 = echarts.init(document.getElementById('shuangzhuxing'));
+		var option3 = {
+			tooltip: {
+				trigger: 'axis',
+				axisPointer: {
+					type: 'shadow'
+				}
+			},
+			legend: {
+				data: ['Day', 'Night'],
+				x: '60%',
+				top: '80%',
+				right: '10%'
+			},
+			grid: {
+				top: '5%',
+				left: '3%',
+				right: '4%',
+				bottom: '12%',
+				containLabel: true
+			},
+			xAxis: {
+				type: 'value',
+				boundaryGap: [0, 0.01],
+				axisLine:{
+					show:false
+				},
+				splitLine:{
+					show:false
+				},
+				axisTick: {
+					length: 0
+				},
+				axisLabel: {
+					show:false
+				}
+			},
+			yAxis: {
+				type: 'category',
+				data: ['March    ','April    ','May    ','June    ','July    '],
+				axisLine:{
+					show:false
+				},
+//					splitLine:{
+//						show:false
+//					}
+				axisTick: {
+					length: 0
+				},
+				
+			},
+			series: [
+				{
+					color: ['#0099CC'],
+					name: 'Day',
+					type: 'bar',
+					barWidth: '20%',
+					data: [182, 234, 290, 1049, 1317]
+				},
+				{
+					color: ['#99CC66'],
+					name: 'Night',
+					type: 'bar',
+					barWidth: '20%',
+					data: [193, 234, 310, 1215, 1341]
+				}
+			]
+		};        
+		myChart3.setOption(option3);
+	</script>
+	
+	<!--曲线图-->
+	<script>
+	var myChart4 = echarts.init(document.getElementById('quxian'));
+	var option4 = {
+			legend: {
+				data: ['FOLLOWERS'],
+				x: 'center',
+				icon: 'circle',
+				itemWidth: 6, 
+				itemHeight: 6,
+			},
+			xAxis: {
+				type: 'category',
+				data: ['June 20', 'July 15', 'August 3'],
+				axisLine:{
+					show:false
+				},
+//					splitLine:{
+//						show:false
+//					}
+				axisTick: {
+					length: 0
+				},
+				boundaryGap: false
+			},
+			yAxis: {
+				type: 'value',
+				axisLine:{
+					show:false
+				},
+				splitLine:{
+					show:true,
+				},
+				axisTick: {
+					length: 0
+				},
+				axisLabel: {
+					show:false
+				},
+				min: 0,
+				max: 1000,
+				interval: 500,
+			},
+			series: [{
+				name: 'FOLLOWERS',
+				color: ['#0099CC'],
+				data: [0, 564, 996],
+				type: 'line',
+				smooth: true,
+				symbol: 'none'
+			}]
+		};	
+	
+	myChart4.setOption(option4);
+	</script>
+</body>
+</html>

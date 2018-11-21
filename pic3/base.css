@@ -1,0 +1,359 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #f5f5f5;
+}
+
+
+/*顶部 开始*/
+.top-bar {
+	height:100px;
+	background: white;
+}
+
+.top-bar-left {
+	float: left;
+	background: url(images/broadcast.png);
+	background-repeat: no-repeat;
+	height:55px;
+	width:148px;
+	margin: 1% auto 1% 10%;
+	-webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.top-bar-right {
+	float: right;
+	height:55px;
+	width:200px;
+	margin: 1% 10% 1% auto;
+	-webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.icon-setting {
+	display: block;
+	float: left;
+	background: url(images/setting.png);
+	background-repeat: no-repeat;
+	height:30px;
+	width:30px;
+	margin:5% auto;
+	-webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.icon-ring {
+	display: block;
+	float: left;
+	background: url(images/ring.png);
+	background-repeat: no-repeat;
+	height:30px;
+	width:30px;
+	margin:5% 5%;
+	-webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.a-log-out {
+	display: block;
+	float: left;
+	color:white;
+	background: #EC3336;
+	height:30px;
+	width:100px;
+	font-size: 12px;
+	padding: 3% 12%;
+	margin: 5% 5%;
+	-webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/*顶部 结束*/
+
+/*导航 开始*/
+.top-nav {
+	height:100px;
+	background: #f5f5f5;
+}
+.top-nav span {
+	float: left;
+	height:50px;
+	width:248px;
+	margin: 2% auto 2% 10%;
+	font-size: 25px;
+	color:gray;
+	-webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.top-nav nav {
+	float: right;
+/*	height:35px;*/
+	width:600px;
+	margin: 4% 8% 2% auto;
+	-webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.top-nav nav a {
+	text-decoration: none;
+	color: #423F3F;
+	font-weight: bold;
+	margin: 0 2% 0 2%;
+}
+/*导航 结束*/
+
+/*div-1 开始*/
+.div-1 {
+	width:80%;
+	height:300px;
+	margin: 0 10%;
+	background: white;
+}
+.h-z {
+	float: left;
+	width:80%;
+	height: 320px;
+	margin: 0 20%;
+}
+#huanxing {
+	display:block;
+	float: left;
+	width:60%;
+	height:300px;
+	margin:3% auto auto -20%;
+}
+#zhuxing {
+	display:block;
+	float:right;
+	width:40%;
+	height:280px;
+	margin:0% 0 auto auto;
+}
+/*div-1 结束*/
+
+/*div-2 开始*/
+.div-2 {
+	display:block;
+	float: left;
+	width:39%;
+	height:300px;
+	margin: 2% 0 2% 10%;
+	background: white;
+}
+#bingzhuang {
+	display:inline-block;
+	width:450px;
+	height:300px;
+/*	margin:3% auto auto -20%;*/
+}
+.span-p-1 {
+	display: block;
+	 position:absolute;
+	z-index: 3;
+	margin: -200px auto auto 5%;
+}
+.span-p-2 {
+	display: block;
+	 position:absolute;
+	z-index: 3;
+	margin: -142px auto auto 5%;
+}
+.span-p-3 {
+	display: block;
+	 position:absolute;
+	z-index: 3;
+	margin: -86px auto auto 5%;
+}
+.span-p-1 span,.span-p-2 span,.span-p-3 span {
+	font-size: 20px;
+	font-weight: bold;
+}
+.span-p-1 p,.span-p-2 p,.span-p-3 p {
+	color: grey;
+	font-size: 10px;
+	font-weight: bold;
+}
+/*div-2 结束*/
+
+/*div-3 开始*/
+.div-3 {
+	display:block;
+	float: left;
+	width:39%;
+	height:300px;
+	margin: 2% 10% 2% 2%;
+	background: white;
+}
+.market-value {
+	float: left;
+	width:100%;
+	height: 25%;
+}
+.span-p-4 {
+	display: block;
+	float: left;
+	margin: 5% 5%;
+}
+.market-value span {
+	font-size: 12px;
+}
+.market-value p {
+	font-size: 20px;
+	font-weight: bold;
+}
+.sm-icon-div {
+	display: block;
+	float: right;
+	margin: 5% 5%;
+}
+#shuangzhuxing {
+	float: left;
+	width:100%;
+	height: 75%;
+}
+/*div-3 结束*/
+
+/*div-4 开始*/
+.div-4 {
+	display:block;
+	float: left;
+	width:39%;
+	height:300px;
+	margin: 2% 0 2% 10%;
+	background: white;
+}
+.analytics {
+	float: left;
+	width:100%;
+	height: 25%;
+}
+.span-p-5 {
+	display: block;
+	float: left;
+	margin: 5% 5%;
+}
+.market-value span {
+	font-size: 12px;
+}
+#quxian {
+	float: left;
+	width:97%;
+	height: 75%;
+}
+.ana-followers {
+	display: block;
+	 position:absolute;
+	z-index: 3;
+	margin: 50px auto auto 213px;
+	font-weight: bold;
+	font-size: 20px;
+}
+/*div-4 结束*/
+
+/*div-5 开始*/
+.div-5 {
+	display:block;
+	float: left;
+	width:39%;
+	height:300px;
+	margin: 2% 10% 2% 2%;
+	background: white;
+}
+.support-requests {
+	float: left;
+	width:100%;
+	height: 25%;
+}
+.sm-a-div a{
+	display: block;
+	float: right;
+	margin: 4% 5%;
+	border:2px solid #f5f5f5;
+	color: darkslategray;
+	font-size: 10px;
+	padding:5px 15px;
+	cursor: pointer;
+}
+#table {
+	display: block;
+	float: left;
+	margin: 15px 5px;
+}
+#table tr {
+	font-size: 10px;
+}
+#table td {
+	border-collapse:collapse;
+	padding-top: 11px;
+}
+.btn-green {
+	font-size: 9px;
+	background: #51EA52;
+	color:white;
+	border:0px;
+	border-radius: 3%;
+	padding:5px 5px;
+	font-weight: bold;
+}
+.btn-red {
+	font-size: 9px;
+	background: #F31C22;
+	color:white;
+	border:0px;
+	border-radius: 3%;
+	padding:5px 5px;
+	font-weight: bold;
+}
+/*div-5 结束*/
+
+/*footer 开始*/
+.footer {
+	display: block;
+/*	float: left;*/
+	height:250px;
+	background-color: #202124;
+	margin-top: 800px;
+}
+.footer-left {
+	float: left;
+	background: url(images/broadcast-footer.png);
+	background-repeat: no-repeat;
+	height:55px;
+	width:148px;
+	margin: 5% auto 1% 10%;
+	-webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.footer-right {
+	float: left;
+	height:180px;
+	width:800px;
+	margin: 5% auto 0 auto;
+	-webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.footer-right ul {
+	display: block;
+	float: left;
+	list-style: none;
+	color: #E8E1E1;
+	font-size: 13px;
+	width:150px;
+	height: 120px;
+}
+.footer-right ul li{
+	display: block;
+	float: left;
+	margin: auto 30px 10px 30px;
+	cursor: pointer;
+}
+/*footer 结束*/
